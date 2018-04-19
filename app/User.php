@@ -31,7 +31,7 @@ class User extends Authenticatable
      * Get all of favorite posts for the user.
      */
 
-    public function favorite()
+    public function favorites()
     {
         return $this->belongsToMany(Post::class, 'favorites', 'user_id', 'post_id')->withTimeStamps();
     }
